@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.DetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="100dp">
+
+                <ImageView
+                    android:id="@+id/picProject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="216dp"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/ss"/>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="264dp"
+                    android:background="@color/dark_blue"
+
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/picProject">
+
+                    <TextView
+                        android:id="@+id/titleProject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="title"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/white" />
+
+                    <TextView
+                        android:id="@+id/deskripsiTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="50dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="Deskripsi project"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/detailTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="50dp"
+                        android:text="Aplikasi pemesanan makanan onine untuk restoran Grage Lanai Resto Kuningan"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/timelineTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Timeline"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="74dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/dark_blue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/timelineTxt" />
+
+<!--                mulai time line-->
+                <View
+                    android:id="@+id/dotV"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/shape_status_completed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/line2" />
+
+                <ImageView
+                    android:id="@+id/requirementImg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="32dp"
+                    android:src="@drawable/requirement"
+                    app:layout_constraintBottom_toBottomOf="@+id/dotV"
+                    app:layout_constraintStart_toEndOf="@+id/dotV"
+                    app:layout_constraintTop_toTopOf="@+id/dotV" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/requirementImg"
+                    app:layout_constraintStart_toEndOf="@+id/requirementImg"
+                    app:layout_constraintTop_toTopOf="@+id/requirementImg">
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Requirement Analysis"
+                        android:textColor="@color/dark_blue"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="20 jan - 30 jan 2025"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineV"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:background="@color/gray"
+                    app:layout_constraintBottom_toTopOf="@id/dotV2"
+                    app:layout_constraintEnd_toEndOf="@+id/dotV"
+                    app:layout_constraintStart_toStartOf="@+id/dotV"
+                    app:layout_constraintTop_toBottomOf="@id/dotV" />
+
+                <View
+                    android:id="@+id/dotV2"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/shape_status_completed"
+                    app:layout_constraintBottom_toBottomOf="@+id/uiuxImg"
+                    app:layout_constraintEnd_toStartOf="@+id/uiuxImg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/uiuxImg" />
+
+                <ImageView
+                    android:id="@+id/uiuxImg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="24dp"
+                    android:padding="2dp"
+                    android:src="@drawable/uiux"
+                    app:layout_constraintEnd_toEndOf="@+id/requirementImg"
+                    app:layout_constraintStart_toStartOf="@+id/requirementImg"
+                    app:layout_constraintTop_toBottomOf="@+id/requirementImg" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/uiuxImg"
+                    app:layout_constraintStart_toEndOf="@+id/uiuxImg"
+                    app:layout_constraintTop_toTopOf="@+id/uiuxImg">
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Desain Wireframe &amp; UI UX"
+                        android:textColor="@color/dark_blue"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="31 jan - 7 feb 2025"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineV2"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:background="@color/gray"
+                    app:layout_constraintBottom_toTopOf="@+id/dotV3"
+                    app:layout_constraintEnd_toEndOf="@+id/dotV2"
+                    app:layout_constraintStart_toStartOf="@+id/dotV2"
+                    app:layout_constraintTop_toBottomOf="@+id/dotV2" />
+
+                <View
+                    android:id="@+id/dotV3"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/shape_status_completed"
+                    app:layout_constraintBottom_toBottomOf="@+id/prepareImg"
+                    app:layout_constraintEnd_toStartOf="@+id/prepareImg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/prepareImg" />
+
+                <ImageView
+                    android:id="@+id/prepareImg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/preparation"
+                    app:layout_constraintEnd_toEndOf="@+id/uiuxImg"
+                    app:layout_constraintStart_toStartOf="@+id/uiuxImg"
+                    app:layout_constraintTop_toBottomOf="@+id/uiuxImg" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/prepareImg"
+                    app:layout_constraintStart_toEndOf="@+id/prepareImg"
+                    app:layout_constraintTop_toTopOf="@+id/prepareImg">
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Technology Preparation"
+                        android:textColor="@color/dark_blue"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="8 feb - 15 feb 2025"
+                        android:textColor="@color/dark_blue" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineV3"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:background="@color/gray"
+                    app:layout_constraintBottom_toTopOf="@+id/dotV4"
+                    app:layout_constraintEnd_toEndOf="@+id/dotV3"
+                    app:layout_constraintStart_toStartOf="@+id/dotV3"
+                    app:layout_constraintTop_toBottomOf="@+id/dotV3" />
+
+                <View
+                    android:id="@+id/dotV4"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/shape_status_remaining"
+                    app:layout_constraintBottom_toBottomOf="@+id/backendImg"
+                    app:layout_constraintEnd_toStartOf="@+id/backendImg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/backendImg" />
+
+                <ImageView
+                    android:id="@+id/backendImg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/backend"
+                    app:layout_constraintEnd_toEndOf="@+id/prepareImg"
+                    app:layout_constraintStart_toStartOf="@+id/prepareImg"
+                    app:layout_constraintTop_toBottomOf="@+id/prepareImg" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/backendImg"
+                    app:layout_constraintStart_toEndOf="@+id/backendImg"
+                    app:layout_constraintTop_toTopOf="@+id/backendImg">
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Backend Development"
+                        android:textColor="@color/dark_blue"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="16 feb - 23 feb 2025"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+                <View
+                    android:id="@+id/lineV4"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:background="@color/gray"
+                    app:layout_constraintBottom_toTopOf="@id/dotV5"
+                    app:layout_constraintEnd_toEndOf="@+id/dotV4"
+                    app:layout_constraintStart_toStartOf="@+id/dotV4"
+                    app:layout_constraintTop_toBottomOf="@id/dotV4" />
+
+                <View
+                    android:id="@+id/dotV5"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/shape_status_remaining"
+                    app:layout_constraintBottom_toBottomOf="@+id/frontendImg"
+                    app:layout_constraintEnd_toStartOf="@+id/frontendImg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/frontendImg" />
+
+                <ImageView
+                    android:id="@+id/frontendImg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="24dp"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/frontend"
+                    app:layout_constraintEnd_toEndOf="@+id/backendImg"
+                    app:layout_constraintStart_toStartOf="@+id/backendImg"
+                    app:layout_constraintTop_toBottomOf="@+id/backendImg" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toEndOf="@+id/frontendImg"
+                    app:layout_constraintTop_toTopOf="@+id/frontendImg"
+                    app:layout_constraintBottom_toBottomOf="@+id/frontendImg">
+
+                    <TextView
+                        android:id="@+id/textView29"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Frontend Development"
+                        android:textColor="@color/dark_blue"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView30"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="24 feb - 3 mar 2025"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+                <View
+                    android:id="@+id/lineV5"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:background="@color/gray"
+                    app:layout_constraintBottom_toTopOf="@id/dotV6"
+                    app:layout_constraintEnd_toEndOf="@+id/dotV5"
+                    app:layout_constraintStart_toStartOf="@+id/dotV5"
+                    app:layout_constraintTop_toBottomOf="@id/dotV5" />
+
+                <View
+                    android:id="@+id/dotV6"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/shape_status_remaining"
+                    app:layout_constraintBottom_toBottomOf="@+id/testingImg"
+                    app:layout_constraintEnd_toStartOf="@+id/testingImg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/testingImg" />
+
+                <ImageView
+                    android:id="@+id/testingImg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/testing"
+                    android:paddingLeft="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/frontendImg"
+                    app:layout_constraintStart_toStartOf="@+id/frontendImg"
+                    app:layout_constraintTop_toBottomOf="@id/frontendImg" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toEndOf="@+id/testingImg"
+                    app:layout_constraintTop_toTopOf="@+id/testingImg"
+                    app:layout_constraintBottom_toBottomOf="@+id/testingImg">
+
+                    <TextView
+                        android:id="@+id/textView31"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Testing"
+                        android:textColor="@color/dark_blue"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="4 mar - 10 mar 2025"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineV6"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:background="@color/gray"
+                    app:layout_constraintBottom_toTopOf="@id/dotV7"
+                    app:layout_constraintEnd_toEndOf="@+id/dotV6"
+                    app:layout_constraintStart_toStartOf="@+id/dotV6"
+                    app:layout_constraintTop_toBottomOf="@id/dotV6" />
+                <View
+                    android:id="@+id/dotV7"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/shape_status_remaining"
+                    app:layout_constraintBottom_toBottomOf="@+id/deployImg"
+                    app:layout_constraintEnd_toStartOf="@+id/deployImg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/deployImg" />
+
+                <ImageView
+                    android:id="@+id/deployImg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="24dp"
+                    android:padding="2dp"
+                    android:src="@drawable/deploy"
+                    app:layout_constraintEnd_toEndOf="@+id/testingImg"
+                    app:layout_constraintStart_toStartOf="@+id/testingImg"
+                    app:layout_constraintTop_toBottomOf="@id/testingImg" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/deployImg"
+                    app:layout_constraintStart_toEndOf="@+id/deployImg"
+                    app:layout_constraintTop_toTopOf="@+id/deployImg">
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Deployment"
+                        android:textColor="@color/dark_blue"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="11 mar - 17 mar 2025"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+                <View
+                    android:id="@+id/lineV7"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:background="@color/gray"
+                    app:layout_constraintBottom_toTopOf="@id/dotV8"
+                    app:layout_constraintEnd_toEndOf="@+id/dotV7"
+                    app:layout_constraintStart_toStartOf="@+id/dotV7"
+                    app:layout_constraintTop_toBottomOf="@id/dotV7" />
+
+                <View
+                    android:id="@+id/dotV8"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/shape_status_remaining"
+                    app:layout_constraintBottom_toBottomOf="@+id/maintenanceImg"
+                    app:layout_constraintEnd_toStartOf="@+id/maintenanceImg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/maintenanceImg" />
+
+                <ImageView
+                    android:id="@+id/maintenanceImg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/maintenance"
+                    app:layout_constraintEnd_toEndOf="@+id/deployImg"
+                    app:layout_constraintStart_toStartOf="@+id/deployImg"
+                    app:layout_constraintTop_toBottomOf="@+id/deployImg" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/maintenanceImg"
+                    app:layout_constraintStart_toEndOf="@+id/maintenanceImg"
+                    app:layout_constraintTop_toTopOf="@+id/maintenanceImg">
+
+                    <TextView
+                        android:id="@+id/textView35"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Maintenance"
+                        android:textColor="@color/dark_blue"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView36"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="18 mar - 24 mar 2025"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
